@@ -5,3 +5,6 @@ mock-server.log
 npm-debug.log*
 .DS_Store
 Thumbs.db
+
+# 推广草稿与发布策略，仅本地保留
+docs/promotion/
