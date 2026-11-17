@@ -1,0 +1,52 @@
+{
+  "name": "pi-provider-hub-multi",
+  "version": "0.2.1",
+  "description": "pi 扩展：多站点 API 模型来源管理，自动发现模型、测试连接并注册给 /model",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "provider",
+    "models",
+    "openai",
+    "anthropic",
+    "google"
+  ],
+  "license": "MIT",
+  "author": "zhuzhongqian",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunrisies/pi-provider-hub.git"
+  },
+  "homepage": "https://github.com/Sunrisies/pi-provider-hub#readme",
+  "bugs": {
+    "url": "https://github.com/Sunrisies/pi-provider-hub/issues"
+  },
+  "files": [
+    "index.ts",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.4",
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  }
+}
