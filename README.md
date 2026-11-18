@@ -54,6 +54,26 @@ Copy-Item -Recurse pi-provider-hub "$env:USERPROFILE\.pi\agent\extensions\pi-pro
 pi -e /path/to/pi-provider-hub/index.ts
 ```
 
+## 卸载
+
+从 npm 或 git 安装的，用 `pi remove` 从 settings 里移除：
+
+```bash
+pi remove npm:pi-provider-hub-multi
+# 或
+pi remove git:github.com/Sunrisies/pi-provider-hub
+```
+
+手动复制到扩展目录的，删掉那个目录即可：
+
+```bash
+rm -rf ~/.pi/agent/extensions/pi-provider-hub
+```
+
+两种方式都**不会**删除 `~/.pi/agent/provider-hub.json`。站点的 URL 和 API Key 存在这个文件里，重装后可以直接复用；确认不再需要时再手动删除。
+
+注意不要同时用两种方式安装：扩展目录里有一份、`packages` 里也有一份时，同一个 provider id 会被注册两次。
+
 ## 命令
 
 | 命令 | 作用 |
